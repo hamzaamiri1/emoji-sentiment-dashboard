@@ -23,7 +23,7 @@ st.markdown(
 
 
 st.title("Emoji Sentiment Dataset – Data Cleaning & Analysis")
-st.markdown("""
+st.markdown("""\
 This interactive app presents insights obtained **after preprocessing**
 the Emoji-Sentiment dataset.  
 The focus is on **data cleaning, feature engineering, and exploratory analysis**.
@@ -77,12 +77,12 @@ sentiment_counts = df['positive flag'].value_counts()
 
 fig, ax = plt.subplots(figsize=(5, 3))
 ax.bar(['Negative', 'Positive'],
-       [sentiment_counts[False], sentiment_counts[True]])
+       [sentiment_counts.get(False, 0), sentiment_counts.get(True, 0)])
 ax.set_ylabel("Number of emojis")
 ax.set_title("Emoji sentiment distribution")
 plt.tight_layout()
 
-st.pyplot(fig, use_container_width=False)
+st.pyplot(fig)
 
 st.divider()
 
@@ -104,7 +104,7 @@ ax.set_title("Top 20 most frequent emojis")
 ax.tick_params(axis='x', rotation=30)
 plt.tight_layout()
 
-st.pyplot(fig, use_container_width=False)
+st.pyplot(fig)
 
 st.divider()
 
@@ -169,4 +169,4 @@ ax.set_ylabel("Average position in text")
 ax.set_title("Emoji placement comparison")
 plt.tight_layout()
 
-st.pyplot(fig, use_container_width=False)
+st.pyplot(fig)
