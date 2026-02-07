@@ -16,7 +16,7 @@ Interactive dashboard analyzing emoji sentiment using data cleaning and explorat
 - Streamlit
 
 ## Live Demo
-👉 [Click here](YOUR_STREAMLIT_LINK)
+👉 [Click here][(https://emoji-sentiment-dashboard-dadw78gvhduxrc3vse6gzy.streamlit.app/)
 
 ## Run locally
 streamlit run app.py
